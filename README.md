@@ -5,3 +5,5 @@ Data Structures from [Neso Academy](https://www.youtube.com/watch?v=16P51olKuzk&
 And algorithms from [Abdul Bari](https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)
 
 ## Starting of with Data Structure First
+### Day 4
+Learned memory allocation using malloc() calloc() realloc() and free()

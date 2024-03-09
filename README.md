@@ -7,3 +7,15 @@ And algorithms from [Abdul Bari](https://www.youtube.com/playlist?list=PLDN4rrl4
 ## Starting of with Data Structure First
 ### Day 4
 Learned memory allocation using malloc() calloc() realloc() and free()
+
+### Day 5
+Learning About Structures and Functions. Which will be used for later on. Learnt:-
+- Structure members as arguments
+- Calling structure members by reference
+- Structure variable as arguments
+- Pointer to a structure as arguments
+- Why heap memory is used instead of Stack (stack automataically deallocates memory)
+- Returning structure variable from a function
+- Returning a pointer to a structure from the function
+- Passing array of structures as arguments
+- Self referential Structures

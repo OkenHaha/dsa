@@ -19,3 +19,10 @@ Learning About Structures and Functions. Which will be used for later on. Learnt
 - Returning a pointer to a structure from the function
 - Passing array of structures as arguments
 - Self referential Structures
+
+### Day 6
+Learning about Singly Linked List.
+- How to add node in a single link list
+- Inserting data at the end of the list
+- Printing the available data on the list
+- Inserting Data at the beginning of the list

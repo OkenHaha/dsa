@@ -55,6 +55,21 @@ struct node* add_beg(struct node *head, int data) {
 	head = ptr;
 	return head;
 }
+void add_at_pos(struct node* head, int data, int position) {
+	struct node *ptr = head;
+	struct node *ptr2 = malloc(sizeof(struct node));
+	
+	ptr->data=data;
+	ptr->link=NULL;
+	
+	position--;
+	while(position!=1){
+		ptr=ptr->link;
+		position--;
+	}
+	ptr2->link=ptr->link;
+	ptr->link=ptr2->link;
+}
 int main() {
 	struct node *head = NULL;
 	head = (struct node *)malloc(sizeof(struct node));
@@ -84,6 +99,9 @@ int main() {
 	struct note *ptr = malloc(sizeof(struct node));
 	head = add_beg(head, 3);
 	printf("\nAfter inserting 3 at the beginning: ");
+	print_data(head);
+	add_at_pos(head, 909, 2);
+	printf("\nAfter inserting at position: ");
 	print_data(head);
 	return 0;
 }

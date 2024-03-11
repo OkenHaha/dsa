@@ -26,3 +26,11 @@ Learning about Singly Linked List.
 - Inserting data at the end of the list
 - Printing the available data on the list
 - Inserting Data at the beginning of the list
+
+### Day 7
+Continued Learning on Singly Linked List.
+- Possible errors occuring at insertion at the start
+- Error on calling by value instead of head at `add_beg()` instead of `head = add_beg()`and removing `head=ptr` and  `return head` at `add_beg()` function
+- Fix error by passing address of head eg. `add_beg(&head, data)
+- Modify `add_beg` by making the `*head` pointer to a double pointer eg. `add_beg(**head, ...)`
+- Inserting data at a certain position

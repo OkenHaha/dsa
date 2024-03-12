@@ -70,6 +70,18 @@ void add_at_pos(struct node* head, int data, int position) {
 	ptr2->link=ptr->link;
 	ptr->link=ptr2->link;
 }
+struct node* delete_first(struct node *head) {
+	if(head==NULL){
+		printf("\nLinked list is empty");
+	}
+	else{
+		struct node *temp = head;
+		head = head->link;
+		free(temp);
+		temp = NULL;
+	}
+	return head;
+}
 int main() {
 	struct node *head = NULL;
 	head = (struct node *)malloc(sizeof(struct node));
@@ -100,8 +112,11 @@ int main() {
 	head = add_beg(head, 3);
 	printf("\nAfter inserting 3 at the beginning: ");
 	print_data(head);
-	add_at_pos(head, 909, 2);
-	printf("\nAfter inserting at position: ");
+	//add_at_pos(head, 909, 2);
+	//printf("\nAfter inserting at position: ");
+	//print_data(head);
+	head = delete_first(head);
+	printf("\nAfter deleting first node: ");
 	print_data(head);
 	return 0;
 }

@@ -34,3 +34,7 @@ Continued Learning on Singly Linked List.
 - Fix error by passing address of head eg. `add_beg(&head, data)
 - Modify `add_beg` by making the `*head` pointer to a double pointer eg. `add_beg(**head, ...)`
 - Inserting data at a certain position
+
+### Day 8
+Only did deletion of first node for today. (lot of work)
+- need to fix program error at insertion at position

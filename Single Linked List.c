@@ -59,8 +59,8 @@ void add_at_pos(struct node* head, int data, int position) {
 	struct node *ptr = head;
 	struct node *ptr2 = malloc(sizeof(struct node));
 	
-	ptr->data=data;
-	ptr->link=NULL;
+	ptr2->data=data;
+	ptr2->link=NULL;
 	
 	position--;
 	while(position!=1){
@@ -68,7 +68,7 @@ void add_at_pos(struct node* head, int data, int position) {
 		position--;
 	}
 	ptr2->link=ptr->link;
-	ptr->link=ptr2->link;
+	ptr->link=ptr2;
 }
 struct node* delete_first(struct node *head) {
 	if(head==NULL){
@@ -112,9 +112,12 @@ int main() {
 	head = add_beg(head, 3);
 	printf("\nAfter inserting 3 at the beginning: ");
 	print_data(head);
-	//add_at_pos(head, 909, 2);
-	//printf("\nAfter inserting at position: ");
-	//print_data(head);
+	
+	int data_pos = 71, pos = 3;
+	add_at_pos(head, data_pos, pos);
+	printf("\nAfter inserting at position: ");
+	print_data(head);
+	
 	head = delete_first(head);
 	printf("\nAfter deleting first node: ");
 	print_data(head);

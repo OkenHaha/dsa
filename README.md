@@ -50,3 +50,4 @@ Only did deletion of first node for today. (lot of work)
 Continued on Singly Linked list
 - Deletion at end of the node (last node)
 - Fixed Day 8 issue
+- Deletion at end using a single pointer

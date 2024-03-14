@@ -45,3 +45,8 @@ Continued Learning on Singly Linked List.
 ### Day 8
 Only did deletion of first node for today. (lot of work)
 - need to fix program error at insertion at position
+
+### Day 9
+Continued on Singly Linked list
+- Deletion at end of the node (last node)
+- Fixed Day 8 issue

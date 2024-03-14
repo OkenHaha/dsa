@@ -82,6 +82,28 @@ struct node* delete_first(struct node *head) {
 	}
 	return head;
 }
+
+struct node* delete_last(struct node *head) {
+	if(head==NULL) {
+		printf("\nLinked list is empty");
+	}
+	else if (head->link==NULL){
+		free(head);
+		head = NULL;
+	}
+	else {
+		struct node *temp = head;
+		struct node *temp2 = head;
+		while(temp->link != NULL) {
+			temp2 = temp;
+			temp = temp->link;
+		}
+		temp2->link=NULL;
+		free(temp);
+		temp = NULL;
+	}
+	return head;
+}
 int main() {
 	struct node *head = NULL;
 	head = (struct node *)malloc(sizeof(struct node));
@@ -120,6 +142,10 @@ int main() {
 	
 	head = delete_first(head);
 	printf("\nAfter deleting first node: ");
+	print_data(head);
+	
+	head = delete_last(head);
+	printf("\nAfter deleting last node: ");
 	print_data(head);
 	return 0;
 }

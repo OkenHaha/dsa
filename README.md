@@ -5,6 +5,13 @@ Data Structures from [Neso Academy](https://www.youtube.com/watch?v=16P51olKuzk&
 And algorithms from [Abdul Bari](https://www.youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O)
 
 ## Starting of with Data Structure First
+### Day 1-3
+(Forgot to add this) I was learning some basics about Data Strxuthres before starting on code implementation.
+- Data Structures and Data Types
+- Asymptotic Notation
+- Asymptotic Analysis
+- Pointers and its types
+
 ### Day 4
 Learned memory allocation using malloc() calloc() realloc() and free()
 

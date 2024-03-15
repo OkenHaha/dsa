@@ -51,3 +51,7 @@ Continued on Singly Linked list
 - Deletion at end of the node (last node)
 - Fixed Day 8 issue
 - Deletion at end using a single pointer
+
+#33 Day 10
+Comtinued
+- Deletion at certain position in the List

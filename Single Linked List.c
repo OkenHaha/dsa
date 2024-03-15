@@ -123,6 +123,28 @@ struct node* delete_last2(struct node *head) {
 	}
 	return head;
 }
+void del_pos(struct node **head, int pos2) {
+	struct node *current = *head;
+	struct node *prev = *head;
+	if(*head==NULL){
+		printf("\nLinked list is empty");
+	}
+	else if (pos2==1) {
+		*head=current->link;
+		free(current);
+		current = NULL;
+	}
+	else{
+		while(pos2 != 1) {
+			prev = current;
+			current=current->link;
+			pos2--;
+		}
+		prev->link=current->link;
+		free(current);
+		current = NULL;
+	}
+}
 int main() {
 	struct node *head = NULL;
 	head = (struct node *)malloc(sizeof(struct node));
@@ -169,6 +191,11 @@ int main() {
 	
 	head = delete_last2(head);
 	printf("\nAfter deleting end node using single pointer: ");
+	print_data(head);
+
+	int pos2 = 2;
+	del_pos(&head, pos2);
+	printf("\nAfter deleting at position 2: ");
 	print_data(head);
 	return 0;
 }

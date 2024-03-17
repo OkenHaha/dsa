@@ -62,3 +62,4 @@ Took an off day. Studied about PCA instead
 ### Day 12
 Continued Linked List
 - Deletion of entire Linked List
+- Reversing Linked List

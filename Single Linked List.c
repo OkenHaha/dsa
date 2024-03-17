@@ -160,6 +160,24 @@ struct node* del_list(struct node *head) {
 	}
 	return head;
 }
+
+struct node* reverse_list(struct node *head){
+	struct node *prev = NULL;
+	struct node *next = NULL;
+	if(head == NULL) {
+		printf("\nList is empty");
+	}
+	else{
+		while (head != NULL) {
+			next = head->link;
+			head->link=prev;
+			prev = head;
+			head = next;
+		}
+		head = prev;
+	}
+	return head;
+}
 int main() {
 	struct node *head = NULL;
 	head = (struct node *)malloc(sizeof(struct node));
@@ -211,6 +229,10 @@ int main() {
 	int pos2 = 2;
 	del_pos(&head, pos2);
 	printf("\nAfter deleting at position 2: ");
+	print_data(head);
+	
+	head = reverse_list(head);
+	printf("\nAfter reversing List: ");
 	print_data(head);
 	
 	head = del_list(head);

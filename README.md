@@ -63,3 +63,6 @@ Took an off day. Studied about PCA instead
 Continued Linked List
 - Deletion of entire Linked List
 - Reversing Linked List
+
+### Day 13
+Took a day off

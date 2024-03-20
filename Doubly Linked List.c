@@ -42,6 +42,21 @@ struct node* addAtBeg(struct node* head, int data) {
 	head=temp;
 	return head;
 }
+
+struct node* addAtEnd(struct node* head, int data) {
+	struct node* temp, *tp = malloc(sizeof(struct node));
+	temp->prev=NULL;
+	temp->data=data;
+	temp->next=NULL;
+	tp = head;
+	while(tp->next != NULL) {
+		tp=tp->next;
+	}
+	tp->next=temp;
+	temp->prev=tp;
+	return head;
+}
+
 int main() {
 	struct node *head = NULL;
 	head = addToEmpty(head, 10);
@@ -49,6 +64,10 @@ int main() {
 	
 	head = addAtBeg(head, 20);
 	printf("\nAfter Inserting at beginning: ");
+	print_data(head);
+	
+	head = addAtEnd(head, 30);
+	printf("\nAfter Inserting at end: ");
 	print_data(head);
 		
 	return 0;

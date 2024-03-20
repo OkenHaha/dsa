@@ -73,3 +73,4 @@ Took a day off
 - Introduction to Doubly Linked List
 - Insertion in Empty List
 - Inserting element at beginning of node
+- Inserting element at the end of the node

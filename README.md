@@ -66,3 +66,8 @@ Continued Linked List
 
 ### Day 13
 Took a day off
+
+(I missed a day and broke my streak 😭)
+
+### Day 14
+- Introduction to Doubly Linked List

@@ -71,3 +71,4 @@ Took a day off
 
 ### Day 14
 - Introduction to Doubly Linked List
+- Insertion in Empty List

@@ -72,3 +72,4 @@ Took a day off
 ### Day 14
 - Introduction to Doubly Linked List
 - Insertion in Empty List
+- Inserting element at beginning of node

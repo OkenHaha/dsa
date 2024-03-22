@@ -142,6 +142,19 @@ struct node* deleteFirst(struct node* head){
 	return head;
 }
 
+struct node* deleteEnd(struct node* head) {
+	struct node* temp = head;
+	struct node* temp2 = NULL;
+	while(temp->next!= NULL) {
+		temp = temp->next;
+	}
+	temp2 = temp->prev;
+	temp2->next = NULL;
+	free(temp);
+	temp = NULL;
+	return head;
+}
+
 int main() {
 	struct node *head = NULL;
 	head = createList(head);
@@ -170,6 +183,10 @@ int main() {
 	
 	head = deleteFirst(head);
 	printf("\nAfter deleting first node: ");
+	print_data(head);
+	
+	head = deleteEnd(head);
+	printf("\nAFter deleting last node: ");
 	print_data(head);
 		
 	return 0;

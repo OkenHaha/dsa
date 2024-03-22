@@ -84,3 +84,4 @@ Continued Doubly Linked List
 - Insertion at position (After)	
 - Creating a list
 - Deleting first node
+- Deleting last node

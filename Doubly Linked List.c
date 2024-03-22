@@ -21,6 +21,7 @@ void print_data(struct node* head) {
 		printf("%d ",ptr->data);
 		ptr = ptr->next;
 	}
+	return head;
 }
 
 struct node* addToEmpty(struct node* head, int data){
@@ -100,18 +101,46 @@ struct node* addAtPosAfter(struct node* head, int data, int pos) {
 		temp = temp->next;
 		pos--;
 	}
+	if(pos==1) {
+		head = addAtBeg(head, data);
+	}
+	else {
 	temp2 = temp->next;
 	temp->next = newP;
 	temp2->prev = newP;
 	newP->next = temp2;
 	newP->prev = temp;
 	return head;
+	}
 	
 }
 
+struct node* createList(struct node* head) {
+	int n, data, i;
+	printf("Enter the number of node: ");
+	scanf("%d",&n);
+	
+	if(n==0){
+		return head;
+	}
+	printf("Enter the elemnent for first node: ");
+	scanf("%d", &data);
+	head = addToEmpty(head, data);
+	
+	for(i=1; i<n; i++) {
+		printf("Enter the elment for %d node: ",i+1);
+		scanf("%d",&data);
+		head = addAtEnd(head, data);
+	}
+	return head;
+}
 
 int main() {
 	struct node *head = NULL;
+	head = createList(head);
+	print_data(head);
+	
+	printf("\nAfter clearing list and entering new node: ");
 	head = addToEmpty(head, 10);
 	printf("%d", head->data);
 	

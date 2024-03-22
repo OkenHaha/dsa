@@ -82,3 +82,4 @@ Took a day off
 Continued Doubly Linked List
 - Insertion at position (Before)
 - Insertion at position (After)	
+- Creating a list

@@ -135,6 +135,13 @@ struct node* createList(struct node* head) {
 	return head;
 }
 
+struct node* deleteFirst(struct node* head){
+	head = head->next;
+	free(head->prev);
+	head->prev=NULL;
+	return head;
+}
+
 int main() {
 	struct node *head = NULL;
 	head = createList(head);
@@ -159,6 +166,10 @@ int main() {
 	
 	head = addAtPosAfter(head, 22, pos);
 	printf("\nAfter insertion at position(after): ");
+	print_data(head);
+	
+	head = deleteFirst(head);
+	printf("\nAfter deleting first node: ");
 	print_data(head);
 		
 	return 0;

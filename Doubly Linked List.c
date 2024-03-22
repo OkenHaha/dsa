@@ -63,7 +63,7 @@ struct node* addAtEnd(struct node* head, int data) {
 	return head;
 }
 
-struct node* addAtPos(struct node* head, int data, int pos) {
+struct node* addAtPosBefore(struct node* head, int data, int pos) {
 	struct node* temp = head;
 	struct node* temp2 = NULL;
 	struct node* newP = NULL;
@@ -88,6 +88,28 @@ struct node* addAtPos(struct node* head, int data, int pos) {
 	}
 }
 
+struct node* addAtPosAfter(struct node* head, int data, int pos) {
+	struct node* temp = head;
+	struct node* temp2 = NULL;
+	struct node* newP = NULL;
+	if(head==NULL) {
+		printf("\nList is empty");
+	}
+	newP = addToEmpty(newP, data);
+	while(pos>2){
+		temp = temp->next;
+		pos--;
+	}
+	temp2 = temp->next;
+	temp->next = newP;
+	temp2->prev = newP;
+	newP->next = temp2;
+	newP->prev = temp;
+	return head;
+	
+}
+
+
 int main() {
 	struct node *head = NULL;
 	head = addToEmpty(head, 10);
@@ -102,8 +124,12 @@ int main() {
 	print_data(head);
 	
 	int pos = 2;
-	head = addAtPos(head, 22, pos);
-	printf("\nAfter inserting at position: ");
+	head = addAtPosBefore(head, 22, pos);
+	printf("\nAfter inserting at position(before): ");
+	print_data(head);
+	
+	head = addAtPosAfter(head, 22, pos);
+	printf("\nAfter insertion at position(after): ");
 	print_data(head);
 		
 	return 0;

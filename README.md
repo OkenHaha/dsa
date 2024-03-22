@@ -80,4 +80,5 @@ Took a day off
 
 ### Day 16
 Continued Doubly Linked List
-- Insertion at position
+- Insertion at position (Before)
+- Insertion at position (After)	

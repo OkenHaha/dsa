@@ -33,6 +33,9 @@ struct node* addToEmpty(struct node* head, int data){
 }
 
 struct node* addAtBeg(struct node* head, int data) {
+	if(head==NULL) {
+		printf("\nList is empty");
+	}
 	struct node* temp = malloc(sizeof(struct node));
 	temp->prev=NULL;
 	temp->data=data;
@@ -44,6 +47,9 @@ struct node* addAtBeg(struct node* head, int data) {
 }
 
 struct node* addAtEnd(struct node* head, int data) {
+	if(head==NULL) {
+		printf("\nList is empty");
+	}
 	struct node* temp, *tp = malloc(sizeof(struct node));
 	temp->prev=NULL;
 	temp->data=data;
@@ -57,6 +63,31 @@ struct node* addAtEnd(struct node* head, int data) {
 	return head;
 }
 
+struct node* addAtPos(struct node* head, int data, int pos) {
+	struct node* temp = head;
+	struct node* temp2 = NULL;
+	struct node* newP = NULL;
+	if(head==NULL) {
+		printf("\nList is empty");
+	}
+	newP = addToEmpty(newP, data);
+	while(pos!=1){
+		temp = temp->next;
+		pos--;
+	}
+	if(temp->next == NULL) {
+		temp->next = newP;
+		newP->prev = temp;
+	}else {
+	temp2 = temp->next;
+	temp->next = newP;
+	temp2->prev = newP;
+	newP->next = temp2;
+	newP->prev = temp;
+	return head;
+	}
+}
+
 int main() {
 	struct node *head = NULL;
 	head = addToEmpty(head, 10);
@@ -68,6 +99,11 @@ int main() {
 	
 	head = addAtEnd(head, 30);
 	printf("\nAfter Inserting at end: ");
+	print_data(head);
+	
+	int pos = 2;
+	head = addAtPos(head, 22, pos);
+	printf("\nAfter inserting at position: ");
 	print_data(head);
 		
 	return 0;

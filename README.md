@@ -77,3 +77,7 @@ Took a day off
 
 ### Day 15
 Took a day off
+
+### Day 16
+Continued Doubly Linked List
+- Insertion at position

@@ -86,3 +86,6 @@ Continued Doubly Linked List
 - Deleting first node
 - Deleting last node
 - Deleting at position
+
+### Day 17
+Skipped. Writing out for GSOC proposal

@@ -88,4 +88,7 @@ Continued Doubly Linked List
 - Deleting at position
 
 ### Day 17
-Skipped. Writing out for GSOC proposal
+Skipped for a few days. Was occupied with some work.
+Continued Doubly Linked List
+- Reversing a Linked List
+(Will do revisions till doubly linked list)

@@ -179,6 +179,23 @@ struct node* delPos(struct node* head, int pos) {
 		return head;
 }
 
+struct node* reverse(struct node* head) {
+	struct node* ptr1 = head;
+	struct node* ptr2 = ptr1->next;
+	
+	ptr1->next = NULL;
+	ptr2->prev = ptr2;
+	 
+	while(ptr2 != NULL) {
+		ptr2->prev = ptr2->next;
+		ptr2->next = ptr1;
+		ptr1 = ptr2;
+		ptr2 = ptr2->prev;
+	}
+	head=ptr1;
+	return head;
+}
+
 int main() {
 	struct node *head = NULL;
 	head = createList(head);
@@ -201,7 +218,7 @@ int main() {
 	printf("\nAfter inserting at position(before): ");
 	print_data(head);
 	
-	head = addAtPosAfter(head, 22, pos);
+	head = addAtPosAfter(head, 23, pos);
 	printf("\nAfter insertion at position(after): ");
 	print_data(head);
 	
@@ -216,6 +233,10 @@ int main() {
 	head = delPos(head, pos);
 	printf("\nAfter deleting position: ");
 	print_data(head);	
+	
+	head = reverse(head);
+	printf("\nAfter reversing: ");
+	print_data(head);
 		
 	return 0;
 }
